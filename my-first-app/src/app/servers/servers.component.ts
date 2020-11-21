@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   serverID:number = 10;
-  serverStatus:string = 'running';
+  serverStatus:string = 'No server running';
   allowNewServer:boolean = false;
 
   constructor() { 
@@ -20,5 +20,7 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+onAddServer(){
+  this.serverStatus = "Server is created and running!"
+}
 }
